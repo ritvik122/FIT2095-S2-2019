@@ -1,0 +1,48 @@
+<html>
+
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+
+            <table>
+                    <tr>
+                        <td><a href="/"><h1>Home</h1></a></td>
+                        <td><a href="newtask"><h1>Add New Task</h1></a></td>
+                        <td><a href="listtasks"><h1>List All Task</h1></a></td>
+                        <td><a href="listdev"><h1>List All Developers</h1></a></td>
+                        <td><a href="updateTask"><h1>Update Task</h1></a></td>
+                    </tr>
+            </table>
+
+            <form action="/Devdata" method="POST">
+
+                First Name:
+                <input type="text" name="firstName" required/> </br>
+
+                Last Name:
+                <input type="text" name="lastName" /> </br>
+
+                Level (BEGINNER OR EXPERT):
+                <input type="text" name="level"  required/> </br>
+
+                State
+                <input type="text" name="state"> </br>
+
+                Suburb
+                <input type="text" name="suburb"> </br>
+
+                Street
+                <input type="text" name="street"> </br>
+
+                Unit
+                <input type="text" name="unit"> </br>
+
+               <button> Submit</button>
+
+            </form>
+
+    </body>
+
+</html>

@@ -1,0 +1,66 @@
+<html>
+        <head>
+                <link rel="stylesheet" href="style.css">
+        </head>    
+
+        <body>
+
+            <table>
+                    <tr>
+                        <td><a href="/"><h1>Home</h1></a></td>
+                        <td><a href="newdeveloper"><h1>Add New Developer</h1></a></td>
+                        <td><a href="newtask"><h1>Add New Task</h1></a></td>
+                        <td><a href="listtasks"><h1>List All Task</h1></a></td>
+                        <td><a href="updateTask"><h1>Update Task</h1></a></td>
+                    </tr>
+            </table>
+
+            <h3>Here is my List:
+                    <table>
+                        <tr>
+                            <td>First Name</td>
+                            <td>Last Name</td>
+                            <td>Level</td>
+                            <td>State</td>        
+                            <td>Suburb</td>
+                            <td>Sreet</td>
+                            <td>Unit</td>
+                        </tr>
+                        <% for ( var i =0; i< db.length;i++){ %>
+                            <tr>
+                                <td>
+                                    <%= db[i].Name.firstName %>
+                                </td>
+
+                                <td>
+                                    <%= db[i].Name.lastName %>
+                                </td>
+
+                                <td>
+                                    <%= db[i].Level %>
+                                </td>
+
+                                <td>
+                                    <%= db[i].Address.State %>
+                                </td>
+
+                                <td>
+                                    <%= db[i].Address.Suburb %>
+                                </td>
+
+                                <td>
+                                    <%= db[i].Address.Street %>
+                                </td>
+
+                                <td>
+                                    <%= db[i].Address.Unit %>
+                                </td>
+                            </tr>
+                            <% }%>
+                </h3>
+
+        
+
+        </body>
+
+</html>

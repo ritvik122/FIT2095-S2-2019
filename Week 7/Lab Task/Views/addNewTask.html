@@ -1,0 +1,39 @@
+<html>
+
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+
+            <table>
+                    <tr>
+                        <td><a href="/"><h1>Home</h1></a></td>
+                        <td><a href="newdeveloper"><h1>Add New Developer</h1></a></td>
+                        <td><a href="listdev"><h1>List All Developers</h1></a></td>
+                        <td><a href="listtasks"><h1>List All Task</h1></a></td>
+                        <td><a href="updateTask"><h1>Update Task</h1></a></td>
+                    </tr>
+            </table>
+
+            <form action="/taskdata" method="POST">
+
+                Task Name:
+                <input type="text" name="TaskName" required/> </br>
+
+                Task Due:
+                <input type="date" name="TaskDue" required/> </br>
+
+                Task Status (InProgrss or Complete):
+                <input type="text" name="TaskStatus" required/> </br>
+
+                Task Description
+                <input type="text" name="TaskDes"/> </br>
+
+               <button> Submit</button>
+
+            </form>
+
+    </body>
+
+</html>

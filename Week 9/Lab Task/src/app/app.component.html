@@ -1,0 +1,74 @@
+<html>
+
+<body>
+  <form>
+
+    <div>
+      <label>Book Title: </label>
+      <br>
+      <input name="BookTitle" [(ngModel)]="BookTitle" class="form-control" type="text" placeholder="Enter the Book Title" required>
+      <br>
+    </div>
+
+    <div>
+      <label>Publication Date: </label>
+      <br>
+      <input name="PublicationDate" [(ngModel)]="PublicationDate" class="form-control" type="date" required>
+      <br>
+    </div>
+
+    <div>
+      <label for="bookType">Select Book Type: </label>
+      <br>
+      <select name="BookType" [(ngModel)]="BookType" class="form-control">
+        <option value="Hard Cover">Hard Cover</option>
+        <option value="Paper Back">Paper Back</option>
+      </select>
+      <br>
+    </div>
+
+    <div>
+      <label>Book Summary: </label>
+      <br>
+      <textarea name="BookSummary" [(ngModel)]="BookSummary" class="form-control" rows="4" cols="50" placeholder="Enter the Book Summary"></textarea>
+      <br>
+    </div>
+
+    <div>
+      <button (click)="saveBook()" class="btn btn-primary" type="SaveBookButton">Save Book {{numberOfBooks}}</button>
+      <button (click)="deleteBooksWithHardCover()" class="btn btn-info" type="DeleteHardCoverButton">Delete Hard Cover {{numberOfHardCover}}</button>
+    </div>
+
+    <hr>
+
+  </form>
+
+  <div>
+    <table class="table table-striped">
+
+      <tr>
+        <th>#</th>
+        <th>Title</th>
+        <th>Publication Date</th>
+        <th>Type</th>
+        <th>Summary</th>
+        <th>Delete ?</th>
+      </tr>
+
+      <ng-container *ngFor="let item of booksDB; let i=index">
+        <tr>
+          <td>{{i+1}}</td>
+          <td>{{item.BookTitle}}</td>
+          <td>{{item.PublicationDate}}</td>
+          <td>{{item.BookType}}</td>
+          <td>{{item.BookSummary}}</td>
+          <td> <button name="BookToBeDeleted" (click)="DeleteBook(i)" type="button" class="btn btn-danger">Delete?</button> </td>
+        </tr>
+      </ng-container>
+
+    </table>
+  </div>
+
+</body>
+
+</html>

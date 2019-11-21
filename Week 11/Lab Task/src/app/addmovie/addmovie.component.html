@@ -1,0 +1,9 @@
+<div class="form-group">
+<label for="actorName">Movie Full Name</label>
+<input type="text" class="form-control" id="actorName" [(ngModel)]="movieFullName">
+</div>
+<div class="form-group">
+<label for="actorName">Production Year</label>
+<input type="number" class="form-control" id="actorName" [(ngModel)]="productionYear">
+</div>
+<button type="submit" class="btn btn-primary" (click)="onSaveMovie()">Save Movie</button>
