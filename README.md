@@ -1,4 +1,4 @@
-# FIT2095 E-business Software Technologies :iphone: (Semester 2, 2019)
+# FIT2095 E-Business Software Technologies :iphone: (Semester 2, 2019)
 
 This repository contains the Pre-Reading Quiz Answers, Workshop Quizzes Answers and the Lab Tasks for each Week from Week 2 to Week 11.
 
